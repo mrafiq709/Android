@@ -1,12 +1,24 @@
 package com.ist.retrofit2;
 
-public class ServerResponse {
+import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
+public class ServerResponse implements Serializable {
+
+    // SerialzedName use kora hoy JSON object er same name ta k indicate korte
+    // r na hoy variable name onojayi search kore default hoile
+    @SerializedName("ip")
     private String ip;
-    private Integer ipDecimal;
+    @SerializedName("ip_decimal")
+    private double ipDecimal;
+    @SerializedName("country")
     private String country;
+    @SerializedName("country_iso")
     private String countryIso;
+    @SerializedName("city")
     private String city;
+    @SerializedName("hostname")
     private String hostname;
 
     public String getIp() {
@@ -17,11 +29,11 @@ public class ServerResponse {
         this.ip = ip;
     }
 
-    public Integer getIpDecimal() {
+    public double getIpDecimal() {
         return ipDecimal;
     }
 
-    public void setIpDecimal(Integer ipDecimal) {
+    public void setIpDecimal(double ipDecimal) {
         this.ipDecimal = ipDecimal;
     }
 
