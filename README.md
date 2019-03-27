@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Android Espresso Testing Example
 Espresso use for android UI Testing 
 
@@ -14,13 +12,3 @@ Run app for Testing as as like bellow image
 
 </br> </br>
 <a href="https://imgur.com/GR6iZCQ"><img src="https://i.imgur.com/GR6iZCQ.png" title="source: imgur.com" /></a>
-
-
-=======
-# AndroidExpressoTesting
-UI Testing Example
->>>>>>> 66ed97c598248f6bb08aab0861634b6be146f96c
-=======
-# AndroidExpressoTesting
-UI Testing Example
->>>>>>> 66ed97c598248f6bb08aab0861634b6be146f96c
