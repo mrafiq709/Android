@@ -3,7 +3,7 @@ package com.ist.apachepoidoc;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.inputmethodservice.Keyboard;
+
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -31,9 +31,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Random;
 
@@ -105,22 +103,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        /*c = row.createCell(0);
-        c.setCellValue("Item Number");
-        c.setCellStyle(cs);
-
-        c = row.createCell(1);
-        c.setCellValue("Quantity");
-        c.setCellStyle(cs);
-
-        c = row.createCell(2);
-        c.setCellValue("Price");
-        c.setCellStyle(cs);*/
-
-        /*sheet1.setColumnWidth(0, (15 * 500));
-        sheet1.setColumnWidth(1, (15 * 500));
-        sheet1.setColumnWidth(2, (15 * 500));*/
-
         // Create a path where we will place our List of objects on external storage
         String directory_path = Environment.getExternalStorageDirectory().getPath() + "/myExcel/";
 
@@ -141,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
         String randomText = requiredDate + "_" + n;
 
         String targetExcel = directory_path+"excel_"+randomText+".xls";
-        System.out.println(targetExcel);
-        Toast.makeText(this, targetExcel, Toast.LENGTH_LONG).show();
+        //System.out.println(targetExcel);
+        //Toast.makeText(this, targetExcel, Toast.LENGTH_LONG).show();
         File filePath = new File(targetExcel);
 
         FileOutputStream os = null;
@@ -179,8 +161,19 @@ public class MainActivity extends AppCompatActivity {
             if (!file.exists()) {
                 file.mkdirs();
             }
-            String targetPdf = directory_path+"word.docx";
-            File filePath = new File(targetPdf);
+
+            Random random = new Random();
+
+            DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+            String requiredDate = df.format(new Date());
+
+            // Obtain a number between [0 - 49].
+            int n = random.nextInt(50);
+
+            String randomText = requiredDate + "_" + n;
+
+            String targetWord = directory_path+"word_"+randomText+".docx";
+            File filePath = new File(targetWord);
             FileOutputStream out = new FileOutputStream(filePath);
             XWPFParagraph paragraph = document.createParagraph();
             XWPFRun run = paragraph.createRun();
