@@ -4,7 +4,7 @@ After Finished Retrofit Call Next Line will be exicuted
 Instructions:
 ---------------
 
-    1. At First add your APIKey in gradle.properties
+    1. At First add your APIKey in gradle.properties: API_KEY="your_api_key"
 
     2. build.gradle: buildConfigField("String", "API_KEY", API_KEY) // add This Line Only
 
