@@ -1,7 +1,7 @@
 # RetrofitSynchronizedCalling
 After Finished Retrofit Call Next Line will be exicuted
 
-Instruction:
+Instructions:
 ---------------
 
     1. At First add your APIKey in gradle.properties
