@@ -4,8 +4,9 @@ After Finished Retrofit Call Next Line will be exicuted
 Instruction:
 ---------------
 `
-1. At First add your APIKey in gradle.properties
-2. build.gradle: buildConfigField("String", "API_KEY", API_KEY) // add This Line Only
+    1. At First add your APIKey in gradle.properties
+
+    2. build.gradle: buildConfigField("String", "API_KEY", API_KEY) // add This Line Only
 
 android {
     compileSdkVersion 28
@@ -26,11 +27,11 @@ android {
     }
 }
 
-3. Add Your server_ip_address here: res/xml/network_security_config.xml
+    3. Add Your server_ip_address here: res/xml/network_security_config.xml
 
-4. Add api_link_without_base_url in GetdataService.class
+    4. Add api_link_without_base_url in GetdataService.class
 
-5. Add BASE_URL in RetrofitClientInstance.class
+    5. Add BASE_URL in RetrofitClientInstance.class
 
 `
 Now Build The Application.
