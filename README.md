@@ -3,7 +3,7 @@ After Finished Retrofit Call Next Line will be exicuted
 
 Instruction:
 ---------------
-`
+
     1. At First add your APIKey in gradle.properties
 
     2. build.gradle: buildConfigField("String", "API_KEY", API_KEY) // add This Line Only
@@ -33,5 +33,4 @@ Instruction:
 
     5. Add BASE_URL in RetrofitClientInstance.class
 
-`
 Now Build The Application.
