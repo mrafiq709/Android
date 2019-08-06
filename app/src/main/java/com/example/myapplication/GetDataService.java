@@ -7,6 +7,6 @@ import retrofit2.http.Headers;
 public interface GetDataService {
 
     @Headers("x-api-key:"+ BuildConfig.API_KEY)
-    @GET("/www/WeeklyReportAPI/public/index.php/api/v1/user/list")
+    @GET("api_link_without_base_url")
     Call<UserListModel> getUserList();
 }
