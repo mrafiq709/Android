@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     private LoginViewModel loginViewModel;
     CallbackManager callbackManager;
     AccessTokenTracker accessTokenTracker;
+    ProfileTracker profileTracker;
     private static final String TAG = "RRR";
 
     @Override
@@ -169,15 +170,17 @@ public class LoginActivity extends AppCompatActivity {
         boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
         Log.d(TAG, "isLoggedIn: " + isLoggedIn);
 
-        ProfileTracker profileTracker = new ProfileTracker() {
+        profileTracker = new ProfileTracker() {
             @Override
             protected void onCurrentProfileChanged(
                     Profile oldProfile,
                     Profile currentProfile) {
                 // App code
-                Log.d(TAG, "profile: " + currentProfile.getFirstName() + ", " + currentProfile.getLinkUri());
+                Log.d(TAG, "profile: " + currentProfile.getFirstName() + ", " + currentProfile.getProfilePictureUri(100,100));
             }
         };
+
+        /// Facebook Login Integration End
     }
 
     @Override
@@ -200,5 +203,6 @@ public class LoginActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
         accessTokenTracker.stopTracking();
+        profileTracker.stopTracking();
     }
 }
