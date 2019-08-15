@@ -1,6 +1,7 @@
 # TwitterSignInAndroid
 Sign in with Twitter Account
 
+    Pre-Condition: You must have to login in Twitter, before login attempt.
 
 References:
 ------------
