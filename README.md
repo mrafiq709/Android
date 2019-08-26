@@ -1,0 +1,2 @@
+# AndroidSettings
+Settings Activity Android
