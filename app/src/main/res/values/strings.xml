@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidSimpleSettingsActivity</string>
+
+    <string name="switch_record_title">Auto Record</string>
+    <string name="switch_auto_record">switch_preference_record</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
